@@ -1,0 +1,68 @@
+'
+    Range("A1").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Selection.Font.Bold = True
+    With Selection.Font
+        .ThemeColor = xlThemeColorAccent1
+        .TintAndShade = -0.249977111117893
+    End With
+    With Selection.Font
+        .ColorIndex = xlAutomatic
+        .TintAndShade = 0
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent2
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent1
+        .TintAndShade = 0.799981688894314
+        .PatternTintAndShade = 0
+    End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent5
+        .TintAndShade = 0.599993896298105
+        .PatternTintAndShade = 0
+    End With
+    Range("A1:C1").Select
+    Range("B1").Activate
+    Range(Selection, Selection.End(xlDown)).Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range(Selection, Selection.End(xlUp)).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Range(Selection, Selection.End(xlUp)).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range("C7").Select
+    Application.WindowState = xlNormal
+    Range("C8").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("C6").Select
+    Application.WindowState = xlNormal
+    Application.WindowState = xlMinimized
+    Windows("lição1_tabela_dinamica.xlsx").Activate
+    Application.WindowState = xlNormal
+    Application.WindowState = xlMinimized
+    Application.WindowState = xlNormal
+    Windows("Pasta2").Activate
+    Range("C7").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Range(Selection, Selection.End(xlUp)).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range("C8").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("C3").Select
+End Sub
