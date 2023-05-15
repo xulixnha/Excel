@@ -1,24 +1,31 @@
 import random
 
-def sortear_grupos(participantes, num_grupos):
-    random.shuffle(participantes)
-    grupos = []
-    tamanho_grupo = len(participantes) // num_grupos
-    
-    for i in range(num_grupos):
-        inicio = i * tamanho_grupo
-        fim = (i + 1) * tamanho_grupo
-        grupos.append(participantes[inicio:fim])
-    
+def criar_grupos(n_grupos):
+    grupos = [[] for _ in range(n_grupos)]
+
+    while True:
+        nome = input("Digite um nome (ou 'fim' para encerrar): ")
+        if nome.lower() == 'fim':
+            break
+        grupos[random.randint(0, n_grupos-1)].append(nome)
+
     return grupos
 
-participantes = ["João", "Maria", "Pedro", "Ana", "Carlos", "Lúcia", "Mariana", "José"]
-num_grupos = 4
+def main():
+    n_grupos = int(input("Digite o número de grupos (2, 4 ou 8): "))
 
-grupos_sorteados = sortear_grupos(participantes, num_grupos)
+    if n_grupos not in [2, 4, 8]:
+        print("Número de grupos inválido!")
+        return
 
-for i, grupo in enumerate(grupos_sorteados, start=1):
-    print(f"Grupo {i}: {grupo}")
+    grupos = criar_grupos(n_grupos)
+
+    for i, grupo in enumerate(grupos):
+        print(f"Grupo {i+1}: {grupo}")
+
+if __name__ == "__main__":
+    main()
+
 
 
 
